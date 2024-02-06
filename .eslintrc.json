@@ -5,7 +5,9 @@
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "airbnb", "env"
+
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -15,5 +17,6 @@
         "react"
     ],
     "rules": {
+        "linebreak-style": "off"
     }
 }
