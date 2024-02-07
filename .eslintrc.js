@@ -6,7 +6,9 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "airbnb"
     ],
     "overrides": [
         {
@@ -31,5 +33,6 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "linebreak-style": "off"
     }
 }
