@@ -1,7 +1,7 @@
 {
   "name": "proyecto",
   "version": "1.0.0",
-  "description": "inicio practica",
+  "description": "inicio",
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
@@ -16,13 +16,35 @@
     "save": "^2.9.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.21.0",
-    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-react": "^7.33.2",
-    "husky": "^9.0.10",
-    "lint-staged": "^15.2.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "parcel-bundler": "^1.12.5",
-    "prettier": "^3.2.5"
-  }
+    "husky": "9.0.10",
+    "lint-staged": "^15.2.0",
+    "prettier": "3.2.5"
+
+  },
+  "husky": {
+    "hooks": {
+      "pre-commint": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint"
+      ],
+      "*.{js,jsx,json,css,scss}": [
+        "prettier --write",
+        "git add"
+      ]
+    },
+    "prettier": {
+      "trailingComma": "all",
+      "singleQuote": true
+    }
+
 }
